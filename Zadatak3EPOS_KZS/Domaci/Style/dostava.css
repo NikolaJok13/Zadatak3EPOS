@@ -1,0 +1,29 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  background-image: url("../img/fwc.jpg");
+  background-size: cover;
+}
+.heroimg {
+  display: flex;
+  justify-content: center;
+}
+
+.heroimg img {
+  width: 90%;
+  border-radius: 2rem;
+}
+
+.herotext {
+  font-size: 2rem;
+  width: 80vw;
+  align-self: center;
+}
+
+@media (max-width: 640px) {
+  .meni {
+    flex-direction: column;
+  }
+}

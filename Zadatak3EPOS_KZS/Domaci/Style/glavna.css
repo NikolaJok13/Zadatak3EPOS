@@ -1,0 +1,90 @@
+body {
+  background: url("../img/cupcakes.webp") no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.herotext {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10vw;
+  width: 40vw;
+  border-radius: 4rem;
+  margin-top: 5rem;
+  background: rgba(56, 201, 215, 0.8);
+}
+
+.herotext h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.herotext p {
+  text-align: center;
+  font-size: 1.5rem;
+  color: rgb(6, 7, 0);
+}
+
+.grid-container {
+  display: grid;
+  column-gap: 25px;
+  grid-template-columns: repeat(1);
+  /* background: rgba(56, 201, 215, 0.8); */
+  padding: 10px;
+  margin-top: 10vh;
+  align-content: center;
+  border-radius: 1rem;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  text-align: left;
+  border-radius: 1rem;
+}
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: relative;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+}
+
+.rslides img {
+  display: block;
+  height: 50vh;
+  float: left;
+  width: 50vw;
+  object-fit: unset;
+  border: 0;
+}
+
+@media (max-width: 780px) {
+  .meni {
+    flex-direction: column;
+  }
+  .rslides img {
+    height: 40vh;
+    width: 65vw;
+  }
+}

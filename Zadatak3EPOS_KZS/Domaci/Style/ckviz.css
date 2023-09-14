@@ -1,0 +1,50 @@
+body {
+  background: url("../img/s3.jpg") no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid-container {
+  display: grid;
+  column-gap: 25px;
+  grid-template-columns: repeat(1);
+  background-color: #282929;
+  padding: 10px;
+  margin-top: 100px;
+  width: 90vw;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 2rem 0;
+  font-size: 2rem;
+  text-align: left;
+}
+
+input {
+  font-size: 2rem;
+}
+
+select {
+  font-size: 2rem;
+}
+
+.tacno {
+  color: green;
+}
+.pogresno {
+  color: red;
+}
+
+@media (max-width: 780px) {
+  .meni {
+    flex-direction: column;
+  }
+
+  input {
+    font-size: 1.5rem;
+  }
+}

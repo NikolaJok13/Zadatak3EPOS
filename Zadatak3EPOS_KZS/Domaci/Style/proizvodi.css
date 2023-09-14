@@ -1,0 +1,101 @@
+body {
+  background-image: url("../img/fwc.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(239, 240, 240, 0.5);
+  width: 80%;
+  border-radius: 4rem;
+}
+.row {
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+}
+
+.rowimg {
+  align-content: center;
+  padding-left: 10%;
+}
+
+.rowtext {
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.row img {
+  width: 20vw;
+  border-radius: 60%;
+  padding: 10% 0;
+}
+
+.row h1 {
+  text-align: center;
+}
+
+.row p {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.grid-container {
+  display: grid;
+  column-gap: 15px;
+  grid-template-columns: repeat(3, 30%);
+  background-color: rgba(0, 0, 0, 0);
+  padding: 10px;
+  margin-top: 100px;
+  width: 90vw;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 30px;
+  text-align: left;
+  margin-left: 10%;
+  min-width: 75px;
+  min-height: 50px;
+}
+
+.grid-item img {
+  width: 60%;
+}
+
+.tooltip .text {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+
+  /*pozicija teksta */
+  position: relative;
+  top: 10%;
+  left: 15%;
+  margin-left: -60px;
+}
+
+.tooltip:hover .text {
+  visibility: visible;
+}
+
+@media (max-width: 800px) {
+  .meni {
+    flex-direction: column;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+  .row img {
+    width: 60vw;
+  }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kviz</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/kvizScript.js"></script>
+    <link href="Style/ckviz.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Style/meni.css" />
+  </head>
+  <body>
+    <nav class="meni">
+      <div class="meni-item"><a href="index.html">Početna</a></div>
+      <div class="meni-item"><a href="Proizvodi.html">Proizvodi</a></div>
+      <div class="meni-item"><a href="Dostava.html">Dostava</a></div>
+      <div class="meni-item"><a href="Kviz.html">Kviz</a></div>
+    </nav>
+    <div class="grid-container">
+      <form id="forma" method="post" action="connection.php" > <!--id="forma" method="post" action="connection.php"-->
+        <div class="grid-item">
+          <label for = "ime">Unesite ime: &nbsp </label>
+          <input type = "text" id = "ime" name = "ime" required/>
+          <br>
+          <br>
+          <label for = "prezime">Unesite prezime: &nbsp </label>
+          <input type = "text" id = "prezime" name = "prezime" required/>
+          <br>
+          <br>
+          <label for = "datum">Izaberite datum rođenja: &nbsp </label>
+          <input type="date" id="datum" name = "datum" required>
+          <!--dodato-->
+        </div>
+        <div class="grid-item">
+          <label
+            >Trivija o slatkišima, unesite mail i imate šanse da osvojite
+            nagrade &nbsp </label
+          ><input type="email" id="mejl" name = "email" required/>
+        </div>
+        <div class="grid-item">
+          <label id="textPitanja1"> Gde je nastala prva torta? &nbsp</label
+          ><input type="radio" name="pitanjeJedan" value="Egipat" />Egipat
+          <input type="radio" name="pitanjeJedan" value="Vavilon" />Vavilon
+          <input type="radio" name="pitanjeJedan" value="Francuska" /> Francuska
+          <input type="radio" name="pitanjeJedan" value="Amerika" />Amerika
+        </div>
+        <div class="grid-item">
+          <label id="textPitanja2"
+            >Koje voce se koristi u torti "tarte tatin" &nbsp </label
+          ><input type="text" id="pitanjeDva" /> &nbsp<input
+            type="button"
+            value="Hint"
+            onclick="hint()"
+          />
+          <br />
+          <br />
+          <img src="" id="imgHint" />
+        </div>
+        <div class="grid-item">
+          <label id="textPitanja3"
+            >Koliko prosečno jaja ide u jednu tortu &nbsp</label
+          ><input type="number" id="pitanjeTri" />
+        </div>
+        <div class="grid-item">
+          <label id="textPitanja4"
+            >Koji voće je glavni sastojak banoffee pite</label
+          >
+          <select id="pitanjeCetri">
+            <option>Banana</option>
+            <option>Jabuka</option>
+            <option>Višnja</option>
+            <option>Jagoda</option>
+          </select>
+        </div>
+        <div class="grid-item">
+          <label id="textPitanja5"
+            >Odakle potice nemačka cokoladna torta &nbsp;</label
+          >
+          <input type="radio" name="pitanjePet" value="Austrija" />Austrija
+          <input type="radio" name="pitanjePet" value="Nemačka" />Nemačka
+          <input type="radio" name="pitanjePet" value="SAD" /> SAD
+          <input type="radio" name="pitanjePet" value="Francuska" />Francuska
+        </div>
+        <div class="grid-item">
+          <label id="textPitanja6"
+            >Koliko parčića u proseku daje torta od 23cm &nbsp</label
+          ><input type="number" id="pitanjeSest" />
+        </div>
+        <div class="grid-item">
+          <label id="textPitanja7"
+            >Koje je ime britanske kraljice po kojoj je jedna torta dobila naziv
+            &nbsp </label
+          ><input type="text" id="pitanjeSedam" />
+        </div>
+        <div class="grid-item">
+          <label id="textPitanja9">
+            Koja vrsta orašastih plodova se koristi u torti Financier
+            &nbsp</label
+          ><input type="radio" name="pitanjeOsam" value="Orasi" /> Orasi
+          <input type="radio" name="pitanjeOsam" value="Bademi" />Bademi
+          <input type="radio" name="pitanjeOsam" value="Kestenje" /> Kestenje
+          <input type="radio" name="pitanjeOsam" value="Pistaći" />Pistaći
+        </div>
+        <div class="grid-item">
+          <input
+            type="submit"
+            id="btnSubmit"
+            onclick="btnScore()"
+            value="Submit"
+          />
+          <br><br>
+          <label for="brojBodova">Broj tačnih odgovora: &nbsp</label>
+          <input type = "text" id = "brojBodova" name = "brojBodova" value="" required/>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
